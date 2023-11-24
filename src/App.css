@@ -1,0 +1,102 @@
+/* aqui la hoja de css está importada en el archivo principal o sea main, de los contrario el fondo no se agregaría a toda la pantalla */
+
+.container-fluid {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#color {
+  color: white !important; /* usamos la palabra !importante al final para darle prioridad sobre bootstrap */
+}
+
+.naveg {
+  display: table-cell; /* esto pone los items de la lista uno al lado del otro. */
+  position: relative;
+  padding: 15px;
+}
+
+.navegacion {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.15em; /* este es el espaciado que hay entre cada letra */
+  padding: 15px 20px;
+  display: inline-block;
+  position: relative;
+}
+
+/* .navegacion:hover {
+  border-bottom: 2px solid aqua;
+  width: 100%;
+  right: 0%;
+  left: 0%;
+} */
+.navbar-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Coloca la línea en la parte inferior */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Grosor del subrayado */
+  background-color: aqua; /* Color del subrayado */
+  transform: scaleX(0); /* Inicialmente, el subrayado está colapsado */
+  transform-origin: center;
+  transition: transform 0.3s ease; /* Agregar transición para el efecto de expansión */
+}
+
+.navbar-nav a:hover::after {
+  transform: scaleX(
+    1
+  ); /* Cuando se pasa el mouse sobre el enlace, el subrayado se expande */
+}
+
+/* Con estas lineas de codigo puedo aplicar estilos diferentes para telefonos moviles */
+@media screen and (max-width: 7680px) {
+  .ul {
+    display: -ms-inline-grid;
+    padding-right: 5px;
+  }
+}
+
+#title {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+#lists {
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.btn:hover,
+.btn:active {
+  /* aqui estoy diciendo que se aplicarán los cambios al pasar sobre el elemento al que pertenece la clase btn y el cambio será un background-color: aqua */
+  background-color: aqua;
+  color: black;
+}
+
+/* .hidden {
+  display: none; /* se utiliza para ocultar un texto que se encuentra dentro del cuerpo de app web */
+
+ion-icon {
+  display: flex;
+  margin-top: 32px;
+  margin-left: 5vh;
+  font-size: 20px;
+  color: white;
+}
+.cert {
+  display: flex;
+  justify-content: center;
+}
+.listas {
+  list-style: none;
+  text-align: left;
+}
+#izq {
+  margin-left: 10%;
+}

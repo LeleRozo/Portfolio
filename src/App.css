@@ -25,12 +25,6 @@
   position: relative;
 }
 
-/* .navegacion:hover {
-  border-bottom: 2px solid aqua;
-  width: 100%;
-  right: 0%;
-  left: 0%;
-} */
 .navbar-nav a::after {
   content: "";
   position: absolute;
@@ -99,4 +93,7 @@ ion-icon {
 }
 #izq {
   margin-left: 10%;
+}
+#manito {
+  cursor: pointer;
 }

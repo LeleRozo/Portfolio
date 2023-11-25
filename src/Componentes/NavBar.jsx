@@ -51,7 +51,7 @@ function NavBar() {
               </li>
               <li>
                 {/* le agrego la funcion que cambia el icono al div y debajo pongo la condicional */}
-                <div onClick={handleClick}>
+                <div id="manito" onClick={handleClick}>
                   {isClicled ? (
                     <ion-icon name="sunny-outline"></ion-icon>
                   ) : (

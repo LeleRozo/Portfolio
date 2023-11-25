@@ -1,6 +1,13 @@
 import React from "react";
+import { useState } from "react";
 
 function NavBar() {
+  /* se establece el estado inicial */
+  const [isClicled, setisClicked] = useState(false);
+  /* se crea una funcion que cambie el estado al hacer click */
+  const handleClick = () => {
+    setisClicked(!isClicled);
+  };
   return (
     <>
       <nav className="navbar navbar-expand-sm navbar-light">
@@ -43,10 +50,14 @@ function NavBar() {
                 </a>
               </li>
               <li>
-                <ion-icon
-                  className="navbar-nav navegacion"
-                  name="sunny-outline"
-                ></ion-icon>
+                {/* le agrego la funcion que cambia el icono al div y debajo pongo la condicional */}
+                <div onClick={handleClick}>
+                  {isClicled ? (
+                    <ion-icon name="sunny-outline"></ion-icon>
+                  ) : (
+                    <ion-icon name="moon-outline"></ion-icon>
+                  )}
+                </div>
               </li>
             </ul>
           </div>
